@@ -1,7 +1,12 @@
 p {
-    color:blue
+    color:black;
 }
 
 h1 {
     text-align: center;
+    margin-top: 2%;
+}
+
+body {
+    background-color: rgb(41, 150, 86);
 }
