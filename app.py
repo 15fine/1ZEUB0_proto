@@ -3,9 +3,12 @@ from flask import Flask, redirect, render_template, request
 app = Flask(__name__)
 
 # main home page
-@app.route('/')
+@app.route('/', methods=["POST", "GET"])
 def index():
-    return render_template("home.html")
+    if request.method == "POST":
+        result() # placeholder, need to parse user input and pass on corresponding recipes
+    else:
+        return render_template("home.html")
 
 # function to display results based on selection of ingredients
 @app.route('/results')
