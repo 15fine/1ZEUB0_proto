@@ -6,14 +6,10 @@ app = Flask(__name__)
 @app.route('/', methods=["POST", "GET"])
 def index():
     if request.method == "POST":
-        result() # placeholder, need to parse user input and pass on corresponding recipes
+        print(request.form.getlist('ingredient'))
+        return 'Done'
     else:
         return render_template("home.html")
-
-# function to display results based on selection of ingredients
-@app.route('/results')
-def result():
-    return render_template("results.html")
 
 if __name__ == "__main__":
     app.run()
