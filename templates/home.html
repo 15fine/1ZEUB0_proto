@@ -17,25 +17,55 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col ad">
-          1 of 3
+          <br>
         </div>
         <div class="col-9">
-          <h2> Select your ingredients:</h2>
           <form action="#" method="post">
+            <h3>Select your ingredients:</h3>
             <input type="checkbox" id="1" name="ingredient" value="1">
             <label for="1"> Chicken </label>
             <input type="checkbox" id="2" name="ingredient" value="2">
-            <label for="2"> Egg </label>
+            <label for="2"> Egg </label> <br>
+            <input type="checkbox" id="3" name="ingredient" value="3">
+            <label for="3"> Salmon </label>
+            <input type="checkbox" id="4" name="ingredient" value="4">
+            <label for="4"> Carrots </label> <br>
+            <h3>Select an occasion, if any</h3>
+            <input type="checkbox" id="1" name="occasion" value="1">
+            <label for="1"> Christmas </label>
+            <input type="checkbox" id="2" name="occasion" value="2">
+            <label for="2"> Thanksgiving </label> <br>
+            <h3>Select any dietary restrictions/allergens</h3>
+            <input type="checkbox" id="1" name="diet" value="1">
+            <label for="1"> No Milk </label>
+            <input type="checkbox" id="2" name="diet" value="2">
+            <label for="2"> No Peanuts </label> 
+            
+            <div class="slidecontainer">
+              <label for="Cost"> Cost </label> <input type="range" min="1" max="100" value="50" class="slider" id="Cost"> 
+              <label for="Time"> Time </label> <input type="range" min="1" max="100" value="50" class="slider" id="Time">
+              <label for="Difficulty"> Difficulty </label> <input type="range" min="1" max="100" value="50" class="slider" id="Difficulty">
+            </div>
             <input type="submit" value="Find Recipes">
           </form>
         </div>
         <div class="col ad">
-          3 of 3
+          <br>
         </div>
-      </div>
       </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value; // Display the default slider value
+
+      // Update the current slider value (each time you drag the slider handle)
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>
+
+  </body>
 </html>

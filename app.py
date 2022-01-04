@@ -6,8 +6,10 @@ app = Flask(__name__)
 @app.route('/', methods=["POST", "GET"])
 def index():
     if request.method == "POST":
-        print(request.form.getlist('ingredient'))
-        return 'Done'
+        ingredients = request.form.getlist('ingredient')
+        occasion = request.form.getlist('occasion')
+        diet = request.form.getlist('diet')
+        return "Done"
     else:
         return render_template("home.html")
 
