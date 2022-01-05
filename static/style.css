@@ -12,14 +12,43 @@ h1 {
 }
 
 body {
-    background-color: rgb(41, 150, 86);
+    background-color: rgb(99, 199, 141);
+    background-image: url(bg.png);
+    background-size: 100%;
     height: 100%;
 }
 
 .ad {
-    background-color:orange;
+    background-color:rgb(255, 255, 255);
+    min-height: 100%;
+    margin-bottom: 100%;
 }
 
-div {
+.ad p{
+    font-size: large;
+    position: relative;
+    left:50%;
+    top:50%;
+}
+
+.height {
     min-height: 100%;
+}
+
+.recipe-block {
+    background-color: gray;
+    border-radius: 25px;
+    margin-bottom: 1%;
+}
+
+.recipe-block p{
+    padding: 2%;
+}
+
+.recipe-block b{
+    padding: 2%;
+}
+
+.recipe-block a{
+    padding: 2%;
 }
