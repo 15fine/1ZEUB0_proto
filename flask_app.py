@@ -10,7 +10,7 @@ def index():
         occasion = request.form.getlist('occasion')
         diet = request.form.getlist('diet')
         print(ingredients)
-        if ingredients == []:
+        if ingredients == [] or ingredients == ['1', '2', '3', '4']:
             return render_template("all.html")
         for i in range(len(ingredients)):
             if ingredients[i] == "1":
