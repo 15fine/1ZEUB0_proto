@@ -1,5 +1,4 @@
 from flask import Flask, redirect, render_template, request, url_for
-import time
 
 app = Flask(__name__)
 
@@ -24,22 +23,6 @@ def index():
                 return render_template("carrot.html")
     else:
         return render_template("home.html")
-
-# results
-@app.route('/results', methods=["POST", "GET"])
-def results(resultid):
-    if request.method == "GET":
-        if resultid == 1:
-            return "Chicken"
-        elif resultid == 3:
-            return "Salmon"
-        elif resultid == 2:
-            return "Egg"
-        elif resultid == 4:
-            return "Carrots"
-    
-    else:
-        return redirect("/")
 
 if __name__ == "__main__":
     app.run()
